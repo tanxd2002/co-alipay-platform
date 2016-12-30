@@ -17,10 +17,10 @@ const sdk = new ALIPAY_SDK(appId, privateKey);
 co(function* (){
 
     //通过auth_code换取access_token
-    sdk.oauthToken('auth_code');
+    yield sdk.oauthToken('auth_code');
 
     //生成推广二维码
-    sdk.createQrcode(options);
+    yield sdk.createQrcode(options);
 
 });
 ```
